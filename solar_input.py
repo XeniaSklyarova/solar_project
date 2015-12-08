@@ -83,9 +83,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     Строки должны иметь следующий формат:
     Star <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
     Planet <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
-
     Параметры:
-
     **output_filename** — имя входного файла
     **space_objects** — список объектов планет и звёзд
     """
