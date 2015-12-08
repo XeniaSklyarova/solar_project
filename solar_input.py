@@ -13,17 +13,20 @@ def read_space_objects_data_from_file(input_filename):
     **input_filename** — имя входного файла
     """
 
+    
     objects = []
     with open(input_filename) as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
             object_type = line.split()[0].lower()
-            if object_type == "star"
-              star = Star()
+            if object_type == "star":  # FIXME: do the same for planet
+                star = Star()
                 parse_star_parameters(line, star)
                 objects.append(star)
-            if object_type == "planet":  
+            else:
+                print("Unknown space object")
+            if object_type == "planet":
                 planet = Planet()
                 parse_planet_parameters(line, planet)
                 objects.append(planet)
@@ -31,9 +34,6 @@ def read_space_objects_data_from_file(input_filename):
                 print("Unknown space object")
 
     return objects
-
-
-
 def parse_star_parameters(line, star):
     """Считывает данные о звезде из строки.
     Входная строка должна иметь слеюущий формат:
