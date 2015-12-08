@@ -67,7 +67,6 @@ def stop_execution():
     start_button['command'] = start_execution
     print('Paused execution.')
 
-
 def open_file_dialog():
     """Открывает диалоговое окно выбора имени файла и вызывает
     функцию считывания параметров системы небесных тел из данного файла.
@@ -90,6 +89,7 @@ def open_file_dialog():
             create_planet_image(space, obj)
         else:
             raise AssertionError()
+
 
 
 def save_file_dialog():
